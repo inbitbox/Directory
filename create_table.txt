@@ -1,8 +1,15 @@
-CREATE TABLE directory (
+CREATE TABLE companies (
 company_id int PRIMARY KEY,
 company_name varchar(80),
 search_name varchar(80),
 contact varchar(80),
 rating int,
 description varchar(300)
+);
+
+/* Do we force contacts to make BitBox accounts? Yes. */
+CREATE TABLE contacts (
+contact_id int PRIMARY KEY,
+contact_name varchar(80),
+contact_company int,
 );
