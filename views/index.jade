@@ -1,0 +1,42 @@
+
+
+head
+	title= "Directory for the new economy"
+	script(src="http://code.jquery.com/jquery-1.9.1.js")
+
+
+
+body
+	h1=title
+		|  Search the new economy
+	form(method="get", action="/search/")
+		input(type="text", name="search_input")
+
+
+		br
+		br
+		
+		button#locationButton
+			Search by location
+			
+		#locationForm(style="display: none")
+			p
+				| City 
+				input(type="text", name="city")
+
+				| State
+				input(type="text", name="state")
+
+			br
+
+			input(type="submit", value="Locate")
+
+	form(method="get", action="/get_listed")
+		input(type="submit", value="Get Listed")
+
+script.
+	$("#locationButton").click(function () {
+		$("#locationForm").show();
+		$("#locationButton").hide();
+	});
+

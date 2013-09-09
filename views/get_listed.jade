@@ -1,0 +1,26 @@
+h1
+	| Add your company!
+
+form(method="post", action="/add_company")
+	
+	| Company Name: 
+	input(type="text", name="name", value=info.name)
+
+	br
+
+	| Contact name: 
+	input(type="text", name="contact", value=info.contact)
+
+	br
+
+	| Description: 
+	input(type="text", name="description", value=info.description)
+
+	br
+	br
+
+	input(type="submit", value="submit")
+	= error
+
+
+

@@ -1,0 +1,8 @@
+CREATE TABLE directory (
+company_id int PRIMARY KEY,
+company_name varchar(80),
+search_name varchar(80),
+contact varchar(80),
+rating int,
+description varchar(300)
+);
