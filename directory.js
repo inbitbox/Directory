@@ -25,7 +25,7 @@ app.configure('production', function(){
 
 
 // Connect to postgresql:
-var conString = "postgres://MatthewNeubauer:Rangers6@localhost/template1";
+var conString = "pg://@localhost/template1";
 var client = new pg.Client(conString);
 
 client.connect(function(err) {
